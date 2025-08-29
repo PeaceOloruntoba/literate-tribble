@@ -5,7 +5,8 @@ import AdminGuard from "./guard/AdminGuard";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/auth/Login";
 import { useAuthStore } from "./store/useAuthStore";
-import Users from "./pages/Users";
+import Users from "./pages/users/Users";
+import UserDetails from "./pages/users/UserDetails";
 
 export default function App() {
   const initializeAuth = useAuthStore((s) => s.initializeAuth);
@@ -23,6 +24,7 @@ export default function App() {
               <Route index element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/users" element={<Users />} />
+              <Route path="/users/:userId" element={<UserDetails />} />
             </Route>
           </Route>
         </Routes>

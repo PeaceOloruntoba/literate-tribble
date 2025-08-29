@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 
 export default function RootLayout() {
   return (
-    <div className="w-screen min-h-screen flex items-center justify-center">
+    <div className="w-screen min-h-screen flex justify-center">
       <div className="w-1/5 h-screen">
         <Sidebar />
       </div>
